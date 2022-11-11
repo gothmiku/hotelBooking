@@ -17,7 +17,7 @@ public class LoginMenu extends JFrame {
         add(Panel1);
         setSize(600,250);
         setTitle(name);
-        setBackground(Color.getColor("51,51,51"));
+        //setBackground(Color.getColor("51,51,51"));
     }
 
 }

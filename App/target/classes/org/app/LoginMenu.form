@@ -48,7 +48,8 @@
         </constraints>
         <properties>
           <background color="-9276814"/>
-          <text value="Username"/>
+          <text value=""/>
+          <toolTipText value="Username"/>
           <visible value="true"/>
         </properties>
       </component>

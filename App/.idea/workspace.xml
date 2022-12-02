@@ -5,17 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc1143da-ab32-451a-9975-e86ccba7236e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/app/adminPanel.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/app/adminPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/app/LoginMenu.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/LoginMenu.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/app/LoginMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/LoginMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/App-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/App-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/app/SQL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/SQL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/app/adminPanel.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/adminPanel.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/app/adminPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/adminPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mysql-connector-java-8.0.30.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/app/LoginMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/app/LoginMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/app/LoginMenu.form" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/app/LoginMenu.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/app/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/app/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SQL/main.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/app/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/app/MysqlCon.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/app/MysqlCon.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/app/adminPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/resources/Log_img1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/resources/jdbc/mysql-connector-java-8.0.30.jar" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,20 +47,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH&quot;: &quot;200&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;295&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Berkan/Desktop/hotelBooking/App/src/main/resources/jdbc/mysql-connector-java-8.0.30.jar&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "230",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "295",
+    "jdk.selected.JAVA_MODULE": "17",
+    "last_opened_file_path": "C:/Users/Berkan/Desktop/hotelBooking/App/src/main/resources/jdbc/mysql-connector-java-8.0.30.jar",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Berkan\Desktop\hotelBooking\App\src\main\resources" />
@@ -138,5 +142,14 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/App$Main.ic" NAME="Main Coverage Results" MODIFIED="1668196451022" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>org.app.*</FILTER>
+    </SUITE>
   </component>
 </project>

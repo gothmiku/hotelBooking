@@ -1,9 +1,6 @@
 package org.app;
 
-import org.w3c.dom.css.RGBColor;
-
 import javax.swing.*;
-import java.awt.*;
 
 public class LoginMenu extends JFrame {
     private JTextArea Title;
@@ -15,7 +12,7 @@ public class LoginMenu extends JFrame {
 
     public LoginMenu(String name){
         add(Panel1);
-        setSize(600,250);
+        //setSize(600,250);
         setTitle(name);
         //setBackground(Color.getColor("51,51,51"));
     }

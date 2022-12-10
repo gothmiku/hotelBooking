@@ -8,10 +8,11 @@ public class Main {
         LoginMenu.setResizable(false);
         LoginMenu.setSize(600,250);
         LoginMenu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
+        /*
         adminPanel admin = new adminPanel("Hotel Management System");
         admin.setVisible(true);
         admin.setSize(1000,500);
         admin.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+         */
     }
 }

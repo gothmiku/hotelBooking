@@ -70,8 +70,12 @@
             </constraints>
             <properties>
               <background color="-13421773"/>
+              <enabled value="false"/>
+              <foreground color="-1"/>
               <gridColor color="-13613015"/>
-              <selectionBackground color="-16770226"/>
+              <selectionBackground color="-16772345"/>
+              <selectionForeground color="-262151"/>
+              <updateSelectionOnSort value="true"/>
             </properties>
           </component>
         </children>

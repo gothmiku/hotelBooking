@@ -5,20 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc1143da-ab32-451a-9975-e86ccba7236e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HotelChart.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/app/LoginMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/LoginMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/app/SQL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/SQL.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/app/adminPanel.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/adminPanel.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/app/adminPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/adminPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mysql-connector-java-8.0.30.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/app/LoginMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/app/LoginMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/app/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/app/MysqlCon.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/app/MysqlCon.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/app/adminPanel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/resources/Log_img1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/resources/jdbc/mysql-connector-java-8.0.30.jar" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +47,7 @@
     "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "230",
     "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "295",
     "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "C:/Users/Berkan/Desktop/hotelBooking/App/src/main/resources/jdbc/mysql-connector-java-8.0.30.jar",
+    "last_opened_file_path": "C:/Users/berka/Desktop/Coding/hotelBooking/hotelBooking/App/target/classes/jdbc/mysql-connector-java-8.0.30.jar",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",

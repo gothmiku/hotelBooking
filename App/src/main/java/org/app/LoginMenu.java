@@ -45,6 +45,9 @@ public class LoginMenu extends JFrame {
     }
 
     public LoginMenu(String name){
+        passwordPasswordField.setBorder(javax.swing.BorderFactory.createEmptyBorder());
+        usernameTextField.setBorder(javax.swing.BorderFactory.createEmptyBorder());
+        logInButton.setBorder(javax.swing.BorderFactory.createEmptyBorder());
         add(Panel1);
         //setSize(600,250);
         setTitle(name);

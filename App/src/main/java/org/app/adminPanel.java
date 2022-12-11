@@ -7,7 +7,16 @@ import java.awt.event.ActionListener;
 import java.sql.*;
 
 
-public class adminPanel<HotelChart> extends JFrame {
+public class adminPanel extends JFrame {
+    public String getDataModel() {
+        return dataModel;
+    }
+
+    public void setDataModel(String dataModel) {
+        this.dataModel = dataModel;
+    }
+
+    private String dataModel;
     private JPanel adminmenu;
     private JTable table1;
     private JButton CustomerButton;
@@ -17,7 +26,7 @@ public class adminPanel<HotelChart> extends JFrame {
     private JButton Modify;
     private JButton Search;
     private JTextField usernameTextField;
-
+    private JButton deleteButton;
 
     DefaultTableModel hotelDataModel(String query){
         Object[][] data = {};
@@ -106,6 +115,7 @@ public class adminPanel<HotelChart> extends JFrame {
         CustomerButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                setDataModel("Customer");
                 table1.setModel(hotelDataModel("Customer"));
             }
         });
@@ -113,23 +123,67 @@ public class adminPanel<HotelChart> extends JFrame {
         HotelButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                setDataModel("Hotel");
                 table1.setModel(hotelDataModel("Hotel"));
             }
         });
         OrderButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                setDataModel("Orders");
                 table1.setModel(hotelDataModel("Orders"));
             }
         });
         RoomsButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                setDataModel("Rooms");
                 table1.setModel(hotelDataModel("Rooms"));
             }
         });
 
 
+        deleteButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                int row;
+                String eve;
+                String query="";
+                switch(dataModel){
+                    case "Customer":
+                        row = table1.getSelectedRow();
+                        eve = table1.getModel().getValueAt(row,0).toString();
+                        query="DELETE FROM Customer WHERE CustomerID="+eve;
+                        break;
+                    case "Hotel":
+                        row = table1.getSelectedRow();
+                        eve = table1.getModel().getValueAt(row,2).toString();
+                        query="DELETE FROM Hotel WHERE HotelID="+eve;
+                        break;
+                    case "Orders":
+                        row = table1.getSelectedRow();
+                        eve = table1.getModel().getValueAt(row,0).toString();
+                        query="DELETE FROM Orders WHERE OrderID="+eve;
+                        break;
+                    case "Rooms":
+                        row = table1.getSelectedRow();
+                        eve = table1.getModel().getValueAt(row,1).toString();
+                        query="DELETE FROM Rooms WHERE RoomID"+eve;
+                        break;
+                }
+                try{
+                    Connection con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/HotelChart","root","152503xy");
+                    PreparedStatement stmt = con.prepareStatement(query);
+                    stmt.execute();
+                    table1.setModel(hotelDataModel(dataModel));
+                    con.close();
+                }catch(SQLException b){
+                    b.printStackTrace();
+                }
+
+
+            }
+        });
     }
 
 }

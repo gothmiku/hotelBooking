@@ -220,17 +220,6 @@
           <foreground color="-1776412"/>
         </properties>
       </component>
-      <component id="9d40f" class="javax.swing.JTextField" binding="textField14" default-binding="true">
-        <constraints>
-          <grid row="14" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="-1"/>
-          </grid>
-        </constraints>
-        <properties>
-          <background color="-9276814"/>
-          <foreground color="-1776412"/>
-        </properties>
-      </component>
       <component id="68ecf" class="javax.swing.JTextField" binding="textField15" default-binding="true">
         <constraints>
           <grid row="14" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
@@ -276,6 +265,17 @@
       <component id="4cb37" class="javax.swing.JComboBox" binding="comboBox1" default-binding="true">
         <constraints>
           <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-9276814"/>
+          <foreground color="-1776412"/>
+        </properties>
+      </component>
+      <component id="9d40f" class="javax.swing.JTextField" binding="textField14" default-binding="true">
+        <constraints>
+          <grid row="14" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
         </constraints>
         <properties>
           <background color="-9276814"/>

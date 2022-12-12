@@ -2,8 +2,11 @@ package org.app;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableRowSorter;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
 import java.sql.*;
 
 
@@ -24,8 +27,8 @@ public class adminPanel extends JFrame {
     private JButton OrderButton;
     private JButton RoomsButton;
     private JButton Modify;
-    private JButton Search;
-    private JTextField usernameTextField;
+    private JButton searchButton;
+    private JTextField searchTextField;
     private JButton deleteButton;
 
     DefaultTableModel hotelDataModel(String query){
@@ -34,7 +37,6 @@ public class adminPanel extends JFrame {
         Object[] columnNames1 = {"HotelName","RoomNumber","HotelID"};
         Object[] columnNames2 = {"OrderID", "RoomNumber", "CustomerID","Order Date"};
         Object[] columnNames3 = {"HotelID", "RoomID", "Single Bed","Double Bed"};
-
 
         DefaultTableModel customerModel = new DefaultTableModel(data,columnNames0);
         switch(query){
@@ -105,9 +107,18 @@ public class adminPanel extends JFrame {
         return customerModel;
     }
 
+    TableRowSorter getTableSorter(DefaultTableModel modelInput){
+        TableRowSorter result = new TableRowSorter(modelInput);
+        return result;
+    }
+
     public adminPanel(String windowName) {
 
-
+        TableRowSorter tableSorter1 = new TableRowSorter(table1.getModel());
+        DefaultTableModel customerModel = hotelDataModel("Customer");
+        DefaultTableModel hotelModel = hotelDataModel("Hotel");
+        DefaultTableModel ordersModel = hotelDataModel("Orders");
+        DefaultTableModel roomsModel = hotelDataModel("Rooms");
         //List<HotelChart.Customer> data = new ArrayList<>();
         add(adminmenu);
         setTitle(windowName);
@@ -116,7 +127,10 @@ public class adminPanel extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 setDataModel("Customer");
-                table1.setModel(hotelDataModel("Customer"));
+                table1.setModel(customerModel);
+                tableSorter1.setModel(table1.getModel());
+                table1.setRowSorter(tableSorter1);
+
             }
         });
 
@@ -124,21 +138,30 @@ public class adminPanel extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 setDataModel("Hotel");
-                table1.setModel(hotelDataModel("Hotel"));
+                table1.setModel(hotelModel);
+                tableSorter1.setModel(table1.getModel());
+                table1.setRowSorter(tableSorter1);
+
             }
         });
         OrderButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 setDataModel("Orders");
-                table1.setModel(hotelDataModel("Orders"));
+                table1.setModel(ordersModel);
+                tableSorter1.setModel(table1.getModel());
+                table1.setRowSorter(tableSorter1);
+
             }
         });
         RoomsButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 setDataModel("Rooms");
-                table1.setModel(hotelDataModel("Rooms"));
+                table1.setModel(roomsModel);
+                tableSorter1.setModel(table1.getModel());
+                table1.setRowSorter(tableSorter1);
+
             }
         });
 
@@ -182,6 +205,44 @@ public class adminPanel extends JFrame {
                 }
 
 
+            }
+        });
+
+        KeyboardFocusManager.getCurrentKeyboardFocusManager()
+                .addKeyEventDispatcher(new KeyEventDispatcher() {
+                    @Override
+                    public boolean dispatchKeyEvent(KeyEvent e) {
+                        String searchInput=searchTextField.getText();
+                        if (searchInput.trim().length() == 0) {
+                            tableSorter1.setRowFilter(null);
+                        } else {
+                            //tableSorter1.setRowFilter(new rowFilterClass(searchInput));
+                            tableSorter1.setRowFilter(RowFilter.regexFilter("(?i)" + searchInput));
+                        }
+                        return false;
+                    }
+                });
+        searchButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String searchInput=searchTextField.getText();
+                if (searchInput.trim().length() == 0) {
+                    tableSorter1.setRowFilter(null);
+                } else {
+                    //tableSorter1.setRowFilter(new rowFilterClass(searchInput));
+                    tableSorter1.setRowFilter(RowFilter.regexFilter("(?i)" + searchInput));
+                }
+
+            }
+        });
+        Modify.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ModifyMenu modifymenu = new ModifyMenu();
+                modifymenu.setVisible(true);
+                modifymenu.setSize(500,400);
+                modifymenu.setResizable(false);
+                modifymenu.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
             }
         });
     }

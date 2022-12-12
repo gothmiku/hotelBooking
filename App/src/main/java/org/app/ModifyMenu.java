@@ -77,13 +77,9 @@ public class ModifyMenu extends JFrame {
         textField14.setBorder(javax.swing.BorderFactory.createEmptyBorder());
         textField15.setBorder(javax.swing.BorderFactory.createEmptyBorder());
         addButton.setBorder(javax.swing.BorderFactory.createEmptyBorder());
-        deleteButton.setBorder(javax.swing.BorderFactory.createEmptyBorder());
         addButton1.setBorder(javax.swing.BorderFactory.createEmptyBorder());
-        button4.setBorder(javax.swing.BorderFactory.createEmptyBorder());
         button5.setBorder(javax.swing.BorderFactory.createEmptyBorder());
-        button6.setBorder(javax.swing.BorderFactory.createEmptyBorder());
         button7.setBorder(javax.swing.BorderFactory.createEmptyBorder());
-        button8.setBorder(javax.swing.BorderFactory.createEmptyBorder());
         comboBox1.addItem(new ComboItem("Male","0"));
         comboBox1.addItem(new ComboItem("Female","1"));
         comboBox1.addItem(new ComboItem("Other","2"));
@@ -117,6 +113,91 @@ public class ModifyMenu extends JFrame {
                 else{
                     String message = "Customer ID can't be empty.";
                     JOptionPane.showMessageDialog(new JFrame(), message, "Error",
+                            JOptionPane.ERROR_MESSAGE);
+                }
+            }
+        });
+        addButton1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(!textField7.getText().isEmpty()){
+                    String hotelName = textField5.getText();
+                    String roomNumber = textField6.getText();
+                    String hotelID = textField7.getText();
+                    try{
+                        Connection con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hotelChart", "root", "152503xy");
+                        Statement statement = con.createStatement();
+                        statement.executeUpdate("INSERT INTO Hotel VALUES ('" + hotelName + "'," + roomNumber + "," + hotelID + ")");
+                        textField5.setText("");
+                        textField6.setText("");
+                        textField7.setText("");
+                        con.close();
+                        //ResultSet result = statement.executeQuery("INSERT INTO Customer VALUES (" + id + ",'" + name + "'," + gender + ",'" + address + "')");
+                    }catch(SQLException b){
+                        b.printStackTrace();
+                    }
+                }
+                else{
+                    String message2 = "Hotel ID number can't be empty";
+                    JOptionPane.showMessageDialog(new JFrame(), message2, "Error",
+                            JOptionPane.ERROR_MESSAGE);
+                }
+            }
+        });
+        button5.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(!textField8.getText().isEmpty()&&!textField9.getText().isEmpty()&&!textField10.getText().isEmpty()&&!textField11.getText().isEmpty()){
+                    String orderID = textField8.getText();
+                    String roomNumber2 = textField9.getText();
+                    String customerID2 = textField10.getText();
+                    String orderDate = textField11.getText();
+                    try{
+                        Connection con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hotelChart", "root", "152503xy");
+                        Statement statement = con.createStatement();
+                        statement.executeUpdate("INSERT INTO Hotel VALUES (" + orderID + "," + roomNumber2 + "," + customerID2 + ",'" + orderDate + "')");
+                        textField8.setText("");
+                        textField9.setText("");
+                        textField10.setText("");
+                        textField11.setText("");
+                        con.close();
+                        //ResultSet result = statement.executeQuery("INSERT INTO Customer VALUES (" + id + ",'" + name + "'," + gender + ",'" + address + "')");
+                    }catch(SQLException b){
+                        b.printStackTrace();
+                    }
+                }
+                else{
+                    String message2 = "None of the text boxes can be empty";
+                    JOptionPane.showMessageDialog(new JFrame(), message2, "Error",
+                            JOptionPane.ERROR_MESSAGE);
+                }
+            }
+        });
+        button7.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(!textField12.getText().isEmpty()&&!textField13.getText().isEmpty()&&!textField14.getText().isEmpty()&&!textField15.getText().isEmpty()){
+                    String hotelID2 = textField12.getText();
+                    String roomID2 = textField13.getText();
+                    String singleBed = textField15.getText();
+                    String doubleBed = textField14.getText();
+                    try{
+                        Connection con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hotelChart", "root", "152503xy");
+                        Statement statement = con.createStatement();
+                        statement.executeUpdate("INSERT INTO Hotel VALUES (" + hotelID2 + "," + roomID2 + "," + singleBed + "," + doubleBed + ")");
+                        textField12.setText("");
+                        textField13.setText("");
+                        textField14.setText("");
+                        textField15.setText("");
+                        con.close();
+                        //ResultSet result = statement.executeQuery("INSERT INTO Customer VALUES (" + id + ",'" + name + "'," + gender + ",'" + address + "')");
+                    }catch(SQLException b){
+                        b.printStackTrace();
+                    }
+                }
+                else{
+                    String message2 = "None of the text boxes can be empty";
+                    JOptionPane.showMessageDialog(new JFrame(), message2, "Error",
                             JOptionPane.ERROR_MESSAGE);
                 }
             }

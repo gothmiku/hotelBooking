@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc1143da-ab32-451a-9975-e86ccba7236e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/app/ModifyMenu.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/app/ModifyMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/app/LoginMenu.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/LoginMenu.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/app/LoginMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/LoginMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/app/ModifyMenu.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/ModifyMenu.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/app/ModifyMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/ModifyMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/app/adminPanel.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/adminPanel.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/app/adminPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/adminPanel.java" afterDir="false" />
     </list>

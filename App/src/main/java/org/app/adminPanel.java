@@ -14,11 +14,9 @@ public class adminPanel extends JFrame {
     public String getDataModel() {
         return dataModel;
     }
-
     public void setDataModel(String dataModel) {
         this.dataModel = dataModel;
     }
-
     private String dataModel;
     private JPanel adminmenu;
     private JTable table1;
@@ -30,13 +28,15 @@ public class adminPanel extends JFrame {
     private JButton searchButton;
     private JTextField searchTextField;
     private JButton deleteButton;
+    private JPanel panelHolder;
+    private JScrollPane scrollPane;
 
     DefaultTableModel hotelDataModel(String query){
         Object[][] data = {};
-        Object[] columnNames0 = {"ID","Full-Name","Gender","Address"};
-        Object[] columnNames1 = {"HotelName","RoomNumber","HotelID"};
-        Object[] columnNames2 = {"OrderID", "RoomNumber", "CustomerID","Order Date"};
-        Object[] columnNames3 = {"HotelID", "RoomID", "Single Bed","Double Bed"};
+        String[] columnNames0 = {"ID","Full-Name","Gender","Address"};
+        String[] columnNames1 = {"HotelName","RoomNumber","HotelID"};
+        String[] columnNames2 = {"OrderID", "RoomNumber", "CustomerID","Order Date"};
+        String[] columnNames3 = {"HotelID", "RoomID", "Single Bed","Double Bed"};
 
         DefaultTableModel customerModel = new DefaultTableModel(data,columnNames0);
         switch(query){
@@ -115,19 +115,21 @@ public class adminPanel extends JFrame {
     public adminPanel(String windowName) {
 
         TableRowSorter tableSorter1 = new TableRowSorter(table1.getModel());
-        DefaultTableModel customerModel = hotelDataModel("Customer");
-        DefaultTableModel hotelModel = hotelDataModel("Hotel");
-        DefaultTableModel ordersModel = hotelDataModel("Orders");
-        DefaultTableModel roomsModel = hotelDataModel("Rooms");
         //List<HotelChart.Customer> data = new ArrayList<>();
         add(adminmenu);
         setTitle(windowName);
+        Color greyColor = new Color(51,51,51);
+        scrollPane.setBackground(greyColor);
+        scrollPane.getViewport().setBackground(greyColor);
+        scrollPane.setBorder(BorderFactory.createEmptyBorder());
+        scrollPane.repaint();
+
 
         CustomerButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 setDataModel("Customer");
-                table1.setModel(customerModel);
+                table1.setModel(hotelDataModel("Customer"));
                 tableSorter1.setModel(table1.getModel());
                 table1.setRowSorter(tableSorter1);
 
@@ -138,7 +140,7 @@ public class adminPanel extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 setDataModel("Hotel");
-                table1.setModel(hotelModel);
+                table1.setModel(hotelDataModel("Hotel"));
                 tableSorter1.setModel(table1.getModel());
                 table1.setRowSorter(tableSorter1);
 
@@ -148,7 +150,7 @@ public class adminPanel extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 setDataModel("Orders");
-                table1.setModel(ordersModel);
+                table1.setModel(hotelDataModel("Orders"));
                 tableSorter1.setModel(table1.getModel());
                 table1.setRowSorter(tableSorter1);
 
@@ -158,7 +160,7 @@ public class adminPanel extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 setDataModel("Rooms");
-                table1.setModel(roomsModel);
+                table1.setModel(hotelDataModel("Rooms"));
                 tableSorter1.setModel(table1.getModel());
                 table1.setRowSorter(tableSorter1);
 
@@ -191,7 +193,7 @@ public class adminPanel extends JFrame {
                     case "Rooms":
                         row = table1.getSelectedRow();
                         eve = table1.getModel().getValueAt(row,1).toString();
-                        query="DELETE FROM Rooms WHERE RoomID"+eve;
+                        query="DELETE FROM Rooms WHERE RoomID="+eve;
                         break;
                 }
                 try{
@@ -199,6 +201,8 @@ public class adminPanel extends JFrame {
                     PreparedStatement stmt = con.prepareStatement(query);
                     stmt.execute();
                     table1.setModel(hotelDataModel(dataModel));
+                    tableSorter1.setModel(table1.getModel());
+                    table1.setRowSorter(tableSorter1);
                     con.close();
                 }catch(SQLException b){
                     b.printStackTrace();

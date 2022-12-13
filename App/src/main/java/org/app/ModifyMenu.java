@@ -155,7 +155,7 @@ public class ModifyMenu extends JFrame {
                     try{
                         Connection con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hotelChart", "root", "152503xy");
                         Statement statement = con.createStatement();
-                        statement.executeUpdate("INSERT INTO Hotel VALUES (" + orderID + "," + roomNumber2 + "," + customerID2 + ",'" + orderDate + "')");
+                        statement.executeUpdate("INSERT INTO Orders VALUES (" + orderID + "," + roomNumber2 + "," + customerID2 + ",'" + orderDate + "')");
                         textField8.setText("");
                         textField9.setText("");
                         textField10.setText("");
@@ -184,7 +184,7 @@ public class ModifyMenu extends JFrame {
                     try{
                         Connection con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hotelChart", "root", "152503xy");
                         Statement statement = con.createStatement();
-                        statement.executeUpdate("INSERT INTO Hotel VALUES (" + hotelID2 + "," + roomID2 + "," + singleBed + "," + doubleBed + ")");
+                        statement.executeUpdate("INSERT INTO Rooms VALUES (" + hotelID2 + "," + roomID2 + "," + singleBed + "," + doubleBed + ")");
                         textField12.setText("");
                         textField13.setText("");
                         textField14.setText("");

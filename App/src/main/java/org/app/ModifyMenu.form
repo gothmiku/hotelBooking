@@ -52,6 +52,7 @@
         <properties>
           <background color="-9276814"/>
           <foreground color="-1776412"/>
+          <toolTipText value="Enter the address info of the client"/>
         </properties>
       </component>
       <component id="c1d09" class="javax.swing.JButton" binding="addButton" default-binding="true">
@@ -77,6 +78,7 @@
         <properties>
           <background color="-9276814"/>
           <foreground color="-1776412"/>
+          <toolTipText value="Enter the hotel name."/>
         </properties>
       </component>
       <component id="49839" class="javax.swing.JTextField" binding="textField6" default-binding="true">
@@ -88,6 +90,7 @@
         <properties>
           <background color="-9276814"/>
           <foreground color="-1776412"/>
+          <toolTipText value="Enter the number of rooms the hotel has."/>
         </properties>
       </component>
       <component id="c6e66" class="javax.swing.JTextField" binding="textField7" default-binding="true">
@@ -99,6 +102,7 @@
         <properties>
           <background color="-9276814"/>
           <foreground color="-1776412"/>
+          <toolTipText value="Please enter the hotel ID number."/>
         </properties>
       </component>
       <hspacer id="ac79e">
@@ -152,6 +156,8 @@
         <properties>
           <background color="-9276814"/>
           <foreground color="-1776412"/>
+          <text value=""/>
+          <toolTipText value="Please enter the order ID number"/>
         </properties>
       </component>
       <component id="c525f" class="javax.swing.JTextField" binding="textField9" default-binding="true">
@@ -163,6 +169,7 @@
         <properties>
           <background color="-9276814"/>
           <foreground color="-1776412"/>
+          <toolTipText value="Please enter the room number."/>
         </properties>
       </component>
       <component id="179f7" class="javax.swing.JTextField" binding="textField10" default-binding="true">
@@ -174,6 +181,7 @@
         <properties>
           <background color="-9276814"/>
           <foreground color="-1776412"/>
+          <toolTipText value="Please enter the customer ID."/>
         </properties>
       </component>
       <component id="672f9" class="javax.swing.JTextField" binding="textField11" default-binding="true">
@@ -185,6 +193,7 @@
         <properties>
           <background color="-9276814"/>
           <foreground color="-1776412"/>
+          <toolTipText value="Please enter the date of order."/>
         </properties>
       </component>
       <component id="540b4" class="javax.swing.JButton" binding="button5" default-binding="true">
@@ -207,6 +216,7 @@
         <properties>
           <background color="-9276814"/>
           <foreground color="-1776412"/>
+          <toolTipText value="Please enter the hotel ID"/>
         </properties>
       </component>
       <component id="c9eab" class="javax.swing.JTextField" binding="textField13" default-binding="true">
@@ -218,6 +228,7 @@
         <properties>
           <background color="-9276814"/>
           <foreground color="-1776412"/>
+          <toolTipText value="Please enter the room ID"/>
         </properties>
       </component>
       <component id="68ecf" class="javax.swing.JTextField" binding="textField15" default-binding="true">
@@ -229,6 +240,7 @@
         <properties>
           <background color="-9276814"/>
           <foreground color="-1776412"/>
+          <toolTipText value="Please enter the number of single beds"/>
         </properties>
       </component>
       <component id="ad5a3" class="javax.swing.JButton" binding="button7" default-binding="true">
@@ -280,6 +292,7 @@
         <properties>
           <background color="-9276814"/>
           <foreground color="-1776412"/>
+          <toolTipText value="Please enter the number of double beds"/>
         </properties>
       </component>
     </children>

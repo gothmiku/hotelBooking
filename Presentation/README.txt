@@ -1,0 +1,1 @@
+I recommend you to use the .html version of the presentation as it is lighter,more stable and has a bit more features.

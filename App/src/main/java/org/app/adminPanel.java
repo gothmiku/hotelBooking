@@ -33,8 +33,8 @@ public class adminPanel extends JFrame {
 
     DefaultTableModel hotelDataModel(String query){
         Object[][] data = {};
-        String[] columnNames0 = {"ID","Full-Name","Gender","Address"};
-        String[] columnNames1 = {"HotelName","RoomNumber","HotelID"};
+        String[] columnNames0 = {"ID","Full-Name","Gender","Address"}; //Customers
+        String[] columnNames1 = {"HotelName","RoomNumber","HotelID"}; //Hotels
         String[] columnNames2 = {"OrderID", "RoomNumber", "CustomerID","Order Date"};
         String[] columnNames3 = {"HotelID", "RoomID", "Single Bed","Double Bed"};
 

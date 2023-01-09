@@ -1,0 +1,174 @@
+body {
+	background: linear-gradient(-45deg, #eafaff, #e0e0e0, #b1eaff, #c9fff2);
+	background-size: 400% 400%;
+	animation: gradient 60s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.inputWrapper{
+  padding:50px,50px;
+}
+
+.dashboardBox{
+animation-name:dashboardAnimOut;
+animation-duration:0.5s;
+  background: rgba(255, 255, 255, 0.8);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  height:100%;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  overflow:hidden;
+  box-sizing: border-box;
+  box-shadow:  35px 35px 70px #bebebe,-35px -35px 70px #000000;
+  padding-right:5px;
+}
+
+.dashboardBox:hover{
+  animation-name: dashboardAnimIn;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  transition: color 12s, font-size 12s;
+}
+
+@keyframes dashboardAnimIn {
+  0%{
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    padding-right:5px;
+    box-shadow:  35px 35px 70px #bebebe,-35px -35px 70px #000000;
+  }
+  100%{
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    padding-right:100px;
+    box-shadow:9px 9px 39px #5a5a5a,
+    -9px -9px 39px #ffffff;
+  }
+}
+@keyframes dashboardAnimOut {
+  0%{
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    padding-right:100px;
+    box-shadow:9px 9px 39px #5a5a5a,
+    -9px -9px 39px #ffffff;
+  }
+  100%{
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    padding-right:5px;
+    box-shadow:  35px 35px 70px #bebebe,-35px -35px 70px #000000;
+
+  }
+}
+.dashboardItems{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-decoration: none;
+  font-family: "JetBrains Mono",monospace;
+  text-align: center;
+  justify-content: space-evenly;
+  color: white;
+}
+
+.items{
+  text-decoration: none;
+  color :rgba(0, 79, 92, 0.708);
+  text-shadow: 5px;
+  margin:10vh 0 10vh 15px;
+  font-size:24px;
+}
+
+.items:hover{
+  font-weight: bold;
+}
+
+#addButton{
+  margin:15px 0;
+}
+
+.contentBox{
+  display:flex;
+  background-color:rgb(225, 237, 255);
+  border-radius: 15px;
+  margin:5vh;
+  margin-left:165px;
+  -webkit-text-fill-color: #000521;
+  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+
+}
+
+.addSection{
+  width:100%;
+  text-align: center;
+  flex-direction: column;
+  background-color:rgb(225, 237, 255);
+  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  border-radius: 15px;
+  bottom:0;
+  margin: 0 50vh 50px 165px;
+  padding:15px;
+  position:fixed;
+}
+
+h1{
+  text-align: center;
+}
+
+.updateForm{
+  align-items: center;
+}
+
+.updateForm:last-child{
+  margin:50px;
+}
+
+.loginButton{
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(100% 100% at 100% 0, #adedff 0, #ffffff 100%);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+}

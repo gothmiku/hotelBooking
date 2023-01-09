@@ -15,7 +15,7 @@ public class LoginMenu extends JFrame {
 
     boolean checkDataStatus(String usernameInput,String passwordInput){
         try{
-            Connection con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/HotelChart","root","152503xy");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/hotelChart","root","");
             String sql = "SELECT * FROM accountinfo WHERE email = ? AND password = ?";
             PreparedStatement stmt = con.prepareStatement(sql);
             stmt.setString(1, usernameInput);

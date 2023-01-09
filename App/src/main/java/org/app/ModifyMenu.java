@@ -98,7 +98,7 @@ public class ModifyMenu extends JFrame {
                     String gender = item.getValue();
                     String address = textField4.getText();
                     try{
-                        Connection con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hotelChart", "root", "152503xy");
+                        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/hotelChart", "root", "");
                         Statement statement = con.createStatement();
                         statement.executeUpdate("INSERT INTO Customer VALUES (" + id + ",'" + name + "'," + gender + ",'" + address + "')");
                         textField1.setText("");
@@ -125,7 +125,7 @@ public class ModifyMenu extends JFrame {
                     String roomNumber = textField6.getText();
                     String hotelID = textField7.getText();
                     try{
-                        Connection con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hotelChart", "root", "152503xy");
+                        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/hotelChart", "root", "");
                         Statement statement = con.createStatement();
                         statement.executeUpdate("INSERT INTO Hotel VALUES ('" + hotelName + "'," + roomNumber + "," + hotelID + ")");
                         textField5.setText("");
@@ -153,7 +153,7 @@ public class ModifyMenu extends JFrame {
                     String customerID2 = textField10.getText();
                     String orderDate = textField11.getText();
                     try{
-                        Connection con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hotelChart", "root", "152503xy");
+                        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/hotelChart", "root", "");
                         Statement statement = con.createStatement();
                         statement.executeUpdate("INSERT INTO Orders VALUES (" + orderID + "," + roomNumber2 + "," + customerID2 + ",'" + orderDate + "')");
                         textField8.setText("");
@@ -182,7 +182,7 @@ public class ModifyMenu extends JFrame {
                     String singleBed = textField15.getText();
                     String doubleBed = textField14.getText();
                     try{
-                        Connection con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hotelChart", "root", "152503xy");
+                        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/hotelChart", "root", "");
                         Statement statement = con.createStatement();
                         statement.executeUpdate("INSERT INTO Rooms VALUES (" + hotelID2 + "," + roomID2 + "," + singleBed + "," + doubleBed + ")");
                         textField12.setText("");

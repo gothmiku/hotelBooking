@@ -56,7 +56,7 @@ public class adminPanel extends JFrame {
                 System.out.println("put a better query name e.g Customer, Hotel...");
         }
         try{
-            Connection con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hotelChart", "root", "152503xy");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/hotelChart", "root", "");
             Statement statement = con.createStatement();
             ResultSet result = statement.executeQuery("SELECT * FROM " + query + ";");
             switch(query){
@@ -197,7 +197,7 @@ public class adminPanel extends JFrame {
                         break;
                 }
                 try{
-                    Connection con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/HotelChart","root","152503xy");
+                    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/hotelChart","root","");
                     PreparedStatement stmt = con.prepareStatement(query);
                     stmt.execute();
                     table1.setModel(hotelDataModel(dataModel));

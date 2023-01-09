@@ -4,9 +4,9 @@ import java.sql.*;
 import java.util.*;
 
 class MysqlCon{
-    static String url = "jdbc:mysql://127.0.0.1:3306/HotelChart";
+    static String url = "jdbc:mysql://localhost:3306/hotelChart";
     static String username = "root";
-    static String password = "152503xy";
+    static String password = "";
 
     public static List<String> getCollumnNames() {
         String query = "SELECT * FROM customer";
